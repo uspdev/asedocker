@@ -8,5 +8,6 @@ docker build -t ase .
 docker run --detach --hostname sybase ase
 # descobrir o IP via
 docker container inspect <ID>
+# demora um pouco para o Sybase subir
 tsql -H <IP> -p 5000 -U sa -P Sybase123456789
 ```
