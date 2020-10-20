@@ -1,0 +1,130 @@
+# Global Options
+#---------------------------------------------
+RUN_SILENT=true
+USER_INSTALL_DIR=/opt/sybase/sap
+INSTALL_OLDER_VERSION=false
+DO_UPDATE_INSTALL=false
+
+# Instalation Type
+#---------------------------------------------
+CHOSEN_FEATURE_LIST=fase_srv,fopen_client,fdblib,fjconnect160,fdbisql,fqptune,fsysam_util,fase_cagent,fodbcl,fconn_python,fconn_perl,fconn_php,fscc_server,fasecmap
+CHOSEN_INSTALL_FEATURE_LIST=fase_srv,fopen_client,fdblib,fjconnect160,fdbisql,fqptune,fsysam_util,fase_cagent,fodbcl,fconn_python,fconn_perl,fconn_php,fscc_server,fasecmap
+CHOSEN_INSTALL_SET=Typical
+SYBASE_PRODUCT_LICENSE_TYPE=express
+
+# What this lines does?
+-fileOverwrite_/opt/sybase/sap/sybuninstall/ASESuite/uninstall.lax=Yes
+
+#Configure New Servers
+#---------------------
+SY_CONFIG_ASE_SERVER=true
+SY_CONFIG_BS_SERVER=false
+SY_CONFIG_JS_SERVER=false
+SY_CONFIG_SCC_SERVER=false
+
+SY_CONFIG_HADR_SERVER=false
+SY_CONFIG_XP_SERVER=false
+SY_CONFIG_BALDR_OPTION=false
+SY_CONFIG_SM_SERVER=false
+SY_CONFIG_WS_SERVER=false
+SY_CONFIG_TXT_SERVER=false
+
+#Configure Servers with Different User Account
+#---------------------------------------------
+SY_CFG_USER_ACCOUNT_CHANGE=no
+SY_CFG_USER_ACCOUNT_NAME=
+SY_CFG_USER_ACCOUNT_PASSWORD=
+SY_CFG_USER_ACCOUNT_CONFIRM_PASSWORD=
+
+#User Configuration Data Directory
+#---------------------------------
+SY_CFG_USER_DATA_DIRECTORY=/opt/sybase/sap
+
+#Configure New SAP ASE
+#---------------------------------
+SY_CFG_ASE_SERVER_NAME=SYBASE
+#SY_CFG_ASE_HOST_NAME=sybase
+SY_CFG_ASE_PORT_NUMBER=5000
+SY_CFG_ASE_APPL_TYPE=MIXED
+SY_CFG_ASE_PAGESIZE=2k
+SY_CFG_ASE_PASSWORD=Sybase123456789
+SY_CFG_ASE_MASTER_DEV_NAME=/opt/sybase/sap/data/master.dat
+SY_CFG_ASE_MASTER_DEV_SIZE=200
+SY_CFG_ASE_MASTER_DB_SIZE=100
+SY_CFG_ASE_SYBPROC_DEV_NAME=/opt/sybase/sap/data/sysprocs.dat
+SY_CFG_ASE_SYBPROC_DEV_SIZE=512
+SY_CFG_ASE_SYBPROC_DB_SIZE=512
+SY_CFG_ASE_SYBTEMP_DEV_NAME=/opt/sybase/sap/data/sybsysdb.dat
+SY_CFG_ASE_SYBTEMP_DEV_SIZE=512
+SY_CFG_ASE_SYBTEMP_DB_SIZE=512
+SY_CFG_ASE_ERROR_LOG=/opt/sybase/log/SYBASE.log
+CFG_REMOTE_AND_CONTROL_AGENT=false
+ENABLE_COCKPIT_MONITORING=false
+COCKPIT_TECH_USER=tech_user
+COCKPIT_TECH_USER_PASSWORD=SybaseTech123456
+SY_CFG_ASE_PCI_ENABLE=false
+SY_CFG_ASE_PCI_DEV_NAME=
+SY_CFG_ASE_PCI_DEV_SIZE=
+SY_CFG_ASE_PCI_DB_SIZE=
+SY_CFG_ASE_TEMP_DEV_NAME=/opt/sybase/sap/data/tempdbdev.dat
+SY_CFG_ASE_TEMP_DEV_SIZE=2048
+SY_CFG_ASE_TEMP_DB_SIZE=2048
+SY_CFG_ASE_OPT_ENABLE=false
+SY_CFG_ASE_CPU_NUMBER=
+SY_CFG_ASE_MEMORY=
+SY_CFG_ASE_LANG=
+SY_CFG_ASE_CHARSET=
+SY_CFG_ASE_SORTORDER=
+SY_CFG_ASE_SAMPLE_DB=false
+
+#Configure New Backup Server
+#---------------------------
+SY_CFG_BS_SERVER_NAME=SYBASE_BS
+SY_CFG_BS_PORT_NUMBER=5001
+SY_CFG_BS_ERROR_LOG=/opt/sybase/log/SYBASE_BS.log
+SY_CFG_BS_ALLOW_HOSTS=
+
+#Configure New Job Scheduler
+#---------------------------
+#SY_CFG_JS_SERVER_NAME=SYBASE_JSAGENT
+#SY_CFG_JS_PORT_NUMBER=4900
+#SY_CFG_JS_MANAG_DEV_NAME=/opt/sybase/sap/data/sybmgmtdb.dat
+#SY_CFG_JS_MANAG_DEV_SIZE=76
+#SY_CFG_JS_MANAG_DB_SIZE=76
+
+#Cockpit Host and Ports
+#----------------------
+#CONFIG_SCC_HTTP_PORT=4282
+#CONFIG_SCC_HTTPS_PORT=4283
+#SCC_TDS_PORT_NUMBER=4998
+#SCC_RMI_PORT_NUMBER=4992
+
+#Cockpit Users and Passwords
+#---------------------------
+#CONFIG_SCC_CSI_SCCADMIN_USER=sccadmin
+#CONFIG_SCC_CSI_SCCADMIN_PWD=S2ybaseTech123456
+#CONFIG_SCC_CSI_UAFADMIN_USER=uafadmin
+#CONFIG_SCC_CSI_UAFADMIN_PWD=S3ybaseTech123456
+#CONFIG_SCC_REPOSITORY_PWD=S1ybaseTech123456
+
+########## Desativadas ##################
+#Configure Self Management
+#-------------------------
+# Caso liguemos SY_CONFIG_SM_SERVER temos que config:
+#SY_CFG_SM_USER_NAME=sa
+
+#Configure New XP Server
+#-----------------------
+# Caso liguemos SY_CONFIG_XP_SERVER temos que config:
+#SY_CFG_XP_SERVER_NAME=SYBASE_XP
+#SY_CFG_XP_PORT_NUMBER=5002
+#SY_CFG_XP_ERROR_LOG=/opt/sap/ASE-16_0/install/SYBASE_XP.log
+
+#Configure Historical Monitoring Data Repository
+#-----------------------------------------------
+# Caso liguemos SY_CONFIG_BALDR_OPTION (sem certeza) temos que config:
+#SY_CFG_BALDR_DATA_DEV_NAME=/opt/sap/data/saptoolsdata.dat
+#SY_CFG_BALDR_DATA_DEV_SIZE=2048
+#SY_CFG_BALDR_LOG_DEV_NAME=/opt/sap/data/saptoolslog.dat
+#SY_CFG_BALDR_LOG_DEV_SIZE=256
+#SY_CFG_SM_PASSWORD=
