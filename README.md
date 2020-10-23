@@ -2,6 +2,11 @@
 
 Uma tentativa de montar um container simples de Sybase
 
+## Subindo o container:
+
+    docker pull uspdev/asedocker
+    docker run --detach --hostname sybase uspdev/asedocker
+
 ## Construindo a imagem localmente para desenvolvimento
 
     git clone git@github.com:USERNAME/asedocker.git
