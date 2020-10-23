@@ -27,6 +27,15 @@ Se quiser acessar o shell do container:
 
     docker exec -i -t <ID> /bin/bash
 
+Limpando ambiente:
+
+    docker stop <ID>
+    docker rm <ID>
+
+Criando uma banco de exemplo:
+
+    tsql -H <ip> -p 5000 -U sa -P Sybase123456789 < database.sql
+
 ## Publicando no docker hub
 
 Login:
@@ -37,9 +46,17 @@ Pegar o <id> da máquina que irá subir em:
 
     docker ps -a
 
-Por fim, de push:
+Commit image:
 
     docker commit <id> uspdev/asedocker
+
+Taggear:
+
+    docker images
+    docker tag <IMAGE ID> uspdev/asedocker:1.0.0
+
+Push:
+
     docker push uspdev/asedocker
 
 
