@@ -2,6 +2,11 @@
 
 Uma tentativa de montar um container simples de Sybase
 
+## Subindo o container:
+
+    docker pull uspdev/asedocker
+    docker run --detach --publish 127.0.0.1:5000:5000 --hostname sybase uspdev/asedocker
+
 ## Construindo a imagem localmente para desenvolvimento
 
     git clone git@github.com:USERNAME/asedocker.git
@@ -35,6 +40,10 @@ Limpando ambiente:
 Criando uma banco de exemplo:
 
     tsql -H <ip> -p 5000 -U sa -P Sybase123456789 < database.sql
+
+ou:
+
+    docker run uspdev/asedocker /bin/sh -c "source /opt/sybase/sap/SYBASE.sh && isql -Usa -PSybase123456789 -SSYBASE -i /root/create.sql"
 
 ## Publicando no docker hub
 
